@@ -1,0 +1,13 @@
+COMPATIBILIDADE PLANEJADA (GUIA LEGIONDEV)
+----------------------------------------
+settings.gradle na raiz
+build.gradle na raiz com com.android.application 8.7.3
+app/build.gradle com modulo :app, compileSdk 35 e Java 17
+app/src/main/AndroidManifest.xml
+app/src/main/java/br/com/redeclara/diagnostico/MainActivity.java
+app/src/main/res/*
+
+Comando de referencia no sistema existente:
+gradle.bat -p CAMINHO_DO_PROJETO --no-daemon --stacktrace --offline :app:assembleDebug
+
+Nao foi possivel executar Gradle/SDK do usuario neste ambiente.

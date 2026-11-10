@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="32dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="REDECLARA  /  ANDROID"
+                android:textColor="@color/accent"
+                android:textSize="11sp"
+                android:letterSpacing="0.13"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Entenda sua conexão."
+                android:textColor="@color/text"
+                android:textSize="28sp"
+                android:fontFamily="sans-serif-medium" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="20dp"
+                android:text="Diagnóstico local de Wi-Fi, portal e VPN, sem modificar a identidade do aparelho."
+                android:textColor="@color/muted"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp"
+                android:background="@drawable/card_bg">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="●  ESTADO ATUAL"
+                    android:textSize="11sp"
+                    android:textColor="@color/accent"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.08" />
+                <TextView
+                    android:id="@+id/statusTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Analisando rede…"
+                    android:textColor="@color/text"
+                    android:textStyle="bold"
+                    android:textSize="21sp" />
+                <TextView
+                    android:id="@+id/statusDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:text="Aguarde a leitura das informações locais."
+                    android:textColor="@color/muted"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/statusTags"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:padding="12dp"
+                    android:background="@drawable/secondary_button"
+                    android:text="Wi-Fi  —   ·   VPN  —   ·   Portal  —"
+                    android:textColor="@color/text"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:layout_marginBottom="9dp"
+                android:text="DADOS DA REDE"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.10"
+                android:textColor="@color/muted" />
+            <TextView
+                android:id="@+id/networkDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="18dp"
+                android:background="@drawable/card_bg"
+                android:text="Coletando informações…"
+                android:textSize="14sp"
+                android:fontFamily="monospace"
+                android:textColor="@color/text"
+                android:lineSpacingExtra="5dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/refreshButton"
+                    style="@style/Widget.RedeClara.PrimaryButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:text="Atualizar" />
+                <View android:layout_width="10dp" android:layout_height="1dp" />
+                <Button
+                    android:id="@+id/testButton"
+                    style="@style/Widget.RedeClara.SecondaryButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:text="Testar internet" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="9dp"
+                android:text="TESTE DE CONECTIVIDADE"
+                android:textColor="@color/muted"
+                android:textStyle="bold"
+                android:letterSpacing="0.10"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/testResults"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="18dp"
+                android:background="@drawable/card_bg"
+                android:text="Toque em “Testar internet”. Serão feitas requisições pequenas de diagnóstico a um servidor de verificação do Google."
+                android:textColor="@color/text"
+                android:lineSpacingExtra="5dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="9dp"
+                android:text="COMPARAR ANTES / DEPOIS"
+                android:textColor="@color/muted"
+                android:textStyle="bold"
+                android:letterSpacing="0.10"
+                android:textSize="12sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/saveSnapshotButton"
+                    style="@style/Widget.RedeClara.PrimaryButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="52dp"
+                    android:text="Guardar estado" />
+                <View android:layout_width="10dp" android:layout_height="1dp" />
+                <Button
+                    android:id="@+id/compareButton"
+                    style="@style/Widget.RedeClara.SecondaryButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="52dp"
+                    android:text="Comparar" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/comparisonResults"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="18dp"
+                android:background="@drawable/card_bg"
+                android:text="Guarde uma referência. Depois de desconectar, reconectar ou reiniciar o celular, abra este app e toque em Comparar."
+                android:textColor="@color/text"
+                android:lineSpacingExtra="4dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="9dp"
+                android:text="ATALHOS DO ANDROID"
+                android:textColor="@color/muted"
+                android:textStyle="bold"
+                android:letterSpacing="0.10"
+                android:textSize="12sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/wifiButton"
+                    style="@style/Widget.RedeClara.SecondaryButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="52dp"
+                    android:text="Config. Wi-Fi" />
+                <View android:layout_width="10dp" android:layout_height="1dp" />
+                <Button
+                    android:id="@+id/vpnButton"
+                    style="@style/Widget.RedeClara.SecondaryButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="52dp"
+                    android:text="Config. VPN" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="9dp"
+                android:text="HISTÓRICO LOCAL"
+                android:textColor="@color/muted"
+                android:textStyle="bold"
+                android:letterSpacing="0.10"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_bg"
+                android:padding="18dp"
+                android:lineSpacingExtra="4dp"
+                android:text="Nenhum registro por enquanto."
+                android:textColor="@color/text"
+                android:textSize="12sp"
+                android:fontFamily="monospace" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/shareButton"
+                    style="@style/Widget.RedeClara.SecondaryButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="48dp"
+                    android:text="Compartilhar" />
+                <View android:layout_width="10dp" android:layout_height="1dp" />
+                <Button
+                    android:id="@+id/clearButton"
+                    style="@style/Widget.RedeClara.SecondaryButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="48dp"
+                    android:text="Limpar histórico" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:padding="16dp"
+                android:background="@drawable/card_bg"
+                android:text="PRIVACIDADE E LIMITES\n\nEste app não muda MAC, identidade, certificados, cookies, VPNs nem cotas do portal. Limpar histórico afeta apenas os próprios registros. Os testes usam conexão de rede somente quando você os inicia."
+                android:lineSpacingExtra="3dp"
+                android:textColor="@color/yellow"
+                android:textSize="12sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="22dp"
+                android:text="REDECLARA  •  V1.0  •  LEGIONDEV"
+                android:textColor="@color/muted"
+                android:letterSpacing="0.08"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
